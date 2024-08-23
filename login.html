@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../Student Registration page/styles.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Centering the header content */
+        .header {
+            position: absolute;
+            top: 9%;
+            left: 39%;
+        }
+
+        .header img {
+            width: 100px;
+        }
+
+        /* Responsive heading */
+        .header h1 {
+            margin-top: 10px;
+            font-size: 32px; /* Default font size */
+            font-weight: bold;
+            color: #333;
+            text-align: center; /* Center the text */
+        }
+
+        /* Responsive styling using media queries */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px; /* Smaller font size for tablets */
+            }
+        }
+        @media (max-width: 768px) {
+            .header {
+                /* font-size: 28px; Smaller font size for tablets */
+                position: absolute;
+                top: 9%;
+                left: 25%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 24px; /* Smaller font size for mobile devices */
+            }
+        }
+
+        /* Styling the container and form */
+        .container {
+            max-width: 400px;
+            margin: 60px auto 0; /* Adjusted top margin to create space for the header */
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .remember-me input {
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0e5e12;
+        }
+
+        #loginMessage {
+            color: green;
+            font-size: 18px;
+        }
+
+        /* Styling the registration link */
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Centered Logo and Title -->
+    <div class="header">
+        <h1>BBSBEC HOSTEL</h1>
+    </div>
+
+    <!-- Container for Login Form -->
+    <div class="container">
+        <h2>Student Login</h2>
+        <form id="loginForm">
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <!-- Remember Me -->
+            <div class="remember-me">
+                <input type="checkbox" id="rememberMe" name="rememberMe">
+                <label for="rememberMe">Remember Me</label>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit">Login</button>
+        </form>
+        <div id="loginMessage" style="display: none; margin-top: 20px; text-align: center;">
+            <p>Login successful!</p>
+        </div>
+        <!-- New User Registration Link -->
+        <div class="register-link">
+            <p>New user? <a href="../Student Registration page/index.html">Register here</a></p>
+        </div>
+    </div>
+
+    <!-- JavaScript to Handle Form Submission -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Handle the "Remember Me" feature
+            const rememberMe = document.getElementById('rememberMe').checked;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (rememberMe) {
+                localStorage.setItem('email', email);
+                localStorage.setItem('password', password);
+            } else {
+                localStorage.removeItem('email');
+                localStorage.removeItem('password');
+            }
+
+            // Show login success message (for now, just a simple message)
+            document.getElementById('loginMessage').style.display = 'block';
+
+            // Redirect to the home page after a brief delay
+            setTimeout(function() {
+                window.location.href = '../home page/index.html'; // Replace with the actual path to your home page
+            }, 1000); // 1-second delay before redirection
+        });
+
+        // Populate email and password fields if they were remembered
+        window.onload = function() {
+            const rememberedEmail = localStorage.getItem('email');
+            const rememberedPassword = localStorage.getItem('password');
+
+            if (rememberedEmail && rememberedPassword) {
+                document.getElementById('email').value = rememberedEmail;
+                document.getElementById('password').value = rememberedPassword;
+                document.getElementById('rememberMe').checked = true;
+            }
+        };
+    </script>
+</body>
+</html>
