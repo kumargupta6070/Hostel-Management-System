@@ -1,0 +1,170 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url(../../Images/bg\ image\ 8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+    text-align: center;
+    margin-top: 1em;
+    padding: 1.5em;
+}
+
+.welcome-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #3e3e3e;
+}
+
+/* Container Styles */
+.container h1 {
+    font-style: italic;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+/* Ground Floor Styles */
+.main_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 2%; /* Adds space between items */
+}
+
+.ground_floor {
+    padding: 2rem;
+    margin-bottom: 3%;
+    border-radius: 20px; /* Changed to rounded rectangle for a stylish look */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for a 3D effect */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.ground_floor:hover {
+    background-color: #858484; /* Changes background on hover */
+    transform: scale(1.05); /* Slightly increases size on hover */
+}
+
+.main_div a {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    width: calc(100% / 5 - 2%); /* Keeps items in a row, adjusting for margins */
+}
+
+/* Image Section Styles */
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+    max-width: 1200px;
+    width: 90%;
+    margin: 2% auto;
+}
+
+.image img {
+    flex: 1 1 15%;
+    margin: 0.5% auto;
+    max-width: 100px;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .main_div a {
+        width: calc(100% / 4 - 2%);
+    }
+}
+
+@media (max-width: 768px) {
+    .main_div a {
+        width: calc(100% / 3 - 2%);
+    }
+
+    .image img {
+        flex: 1 1 30%;
+        max-width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main_div a {
+        width: calc(100% / 2 - 2%);
+    }
+
+    .image img {
+        flex: 1 1 45%;
+        max-width: 60px;
+        margin-top: 10px;
+    }
+}
+/* .container h1{
+    color: white;
+} */
