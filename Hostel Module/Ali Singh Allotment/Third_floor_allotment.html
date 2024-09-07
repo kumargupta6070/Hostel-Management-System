@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management Home</title>
+    <link rel="stylesheet" href="../Binod Singh Allotment/Ground_floor_allotment.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <h1>BBSBEC Hostel</h1>
+        <ul>
+            <li><a href="../../home page/home.html">Home</a></li>
+            <li><a href="#">Student Details</a></li>
+            <li><a href="../../home page/home.html">Hostel Facilities</a></li>
+            <li><a href="../../index.html">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+        <h2>Welcome to Baba Ali Singh Hostel</h2>
+        <p>Baba Banda Singh Bahadur Engineering College, Fatehgarh Sahib, Punjab, 140407</p>
+    </section>
+    
+    <div class="container">
+        <h1>CHOOSE YOUR ROOM NUMBER</h1>
+        
+        <div class="main_div">
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">301</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">302</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">303</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">304</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">305</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">306</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">307</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">308</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">309</div></a>
+            <a href="../Hostel Allotment Page/Binod_Singh_allotment.html"><div class="ground_floor">310</div></a>
+        </div>
+    </div>
+
+    <div class="Notice">
+        <div class="image">
+            <img src="../../Images/smoke.png" alt="" width="89">
+            <img src="../../Images/iron im.png" alt="" width="90">
+            <img src="../../Images/dont fight.webp" alt="" width="90">
+            <img src="../../Images/sarab.png" alt="" width="90">
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 BBSBEC Hostel Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to handle dropdowns -->
+    <script>
+        document.querySelectorAll('.module > div').forEach((module) => {
+            module.addEventListener('click', function() {
+                // Toggle the dropdown content visibility
+                this.querySelector('.dropdown-content').classList.toggle('show');
+            });
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.module > div > h3')) {
+                document.querySelectorAll('.dropdown-content').forEach((dropdown) => {
+                    dropdown.classList.remove('show');
+                });
+            }
+        }
+    </script>
+</body>
+</html>
