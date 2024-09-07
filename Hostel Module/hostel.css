@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: url(../Images/bg\ image\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome Section Styles */
+.welcome-section {
+    text-align: center;
+    margin-top: 1em;
+    padding: 1.5em;
+}
+
+.welcome-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Container and Module Styles */
+.container h1 {
+    font-style: italic;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 5%;
+}
+
+.module {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+    gap: 1%; /* Decreased gap between modules */
+}
+
+.module1, .module2, .module3, .module4 {
+    flex: 1 1 22%; /* Ensures the modules are more compact and evenly spaced */
+    padding: 0.2em 0.5em; /* Reduced left and right padding */
+    background-color: steelblue;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 3%;
+    cursor: pointer;
+    text-align: center; /* Center text within modules */
+    position: relative; /* For dropdown positioning */
+}
+
+.module1:hover, .module2:hover, .module3:hover, .module4:hover {
+    background-color: rgb(6, 43, 72);
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the module */
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown */
+.show {
+    display: block;
+}
+
+/* Image Section Styles */
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers images horizontally */
+    gap: 1%; /* Ensures small gaps between images */
+    max-width: 1200px;
+    width: 90%;
+    margin: 2% auto;
+}
+
+.image img {
+    flex: 1 1 15%; /* Smaller images */
+    margin: 0.5% auto; /* Adds slight top/bottom margin */
+    max-width: 100px; /* Sets a maximum width for the images */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .module1, .module2, .module3, .module4 {
+        flex: 1 1 45%; /* Adjust module size for smaller screens */
+        margin-bottom: 5%; /* Increase bottom margin slightly for spacing */
+    }
+
+    .image img {
+        flex: 1 1 30%; /* Adjust image size for smaller screens */
+        max-width: 80px; /* Sets a smaller maximum width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .module1, .module2, .module3, .module4 {
+        flex: 1 1 100%; /* Stacks modules vertically */
+        margin-bottom: 10px;
+    }
+
+    .image img {
+        flex: 1 1 45%; /* Further adjust image size for very small screens */
+        max-width: 60px; /* Sets a smaller maximum width for very small screens */
+        margin-top: 10px;
+    }
+}
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the module */
+    left: 0;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Add gradient background */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 12px; /* More rounded corners */
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0.95; /* Slight transparency for a sleek look */
+}
+
+.dropdown-content a {
+    color: white; /* White text for better contrast */
+    text-decoration: none;
+    display: block;
+    padding: 12px 15px; /* Increase padding for a more clickable area */
+    border-radius: 6px; /* Rounded corners for dropdown items */
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
+    margin-bottom: 8px; /* Add space between items */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for hover effects */
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(0, 0, 0, 0.3); /* Darker background on hover */
+    transform: translateX(5px); /* Slight move effect on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+.show {
+    display: block;
+}
+
+/* Module Styles Update */
+.module1, .module2, .module3, .module4 {
+    background: linear-gradient(135deg, #4b6cb7, #182848); /* Gradient background for modules */
+    color: white;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.module1:hover, .module2:hover, .module3:hover, .module4:hover {
+    background: linear-gradient(135deg, #182848, #4b6cb7); /* Reverse gradient on hover */
+    color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    transition: background 0.3s, box-shadow 0.3s;
+}
