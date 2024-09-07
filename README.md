@@ -93,4 +93,4 @@ The Responsive Hostel Management System is a comprehensive, user-friendly web ap
 
 
 
-# This Responsive Hostel Management System is designed to provide a seamless, user-friendly experience for managing hostel-related tasks while ensuring accessibility across a wide range of devices. With future enhancements planned, this project has the potential to become a fully integrated hostel management solution for BBSBEC Hostel.
+This Responsive Hostel Management System is designed to provide a seamless, user-friendly experience for managing hostel-related tasks while ensuring accessibility across a wide range of devices. With future enhancements planned, this project has the potential to become a fully integrated hostel management solution for BBSBEC Hostel.
