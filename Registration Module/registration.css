@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(../Images/Registration\ page\ background\ image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 15px;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    background-image: url(../Images/registration\ page\ background\ image\ 3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 90%; /* Default width for larger screens */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Button Styling */
+button {
+    width: 90%; /* Default button width */
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+button:hover {
+    background-color: #110850;
+}
+
+/* Responsive Styles */
+
+/* Large screens (desktops) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 85%;
+        font-size: 14px;
+    }
+
+    button {
+        width: 85%; /* Button adjusts width */
+        font-size: 14px;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 80%; /* Narrower input fields */
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        width: 80%; /* Button adjusts width */
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 75%; /* Narrow input fields for smaller screens */
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        width: 75%; /* Button adjusts width */
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* Extra small screens (very small mobile devices) */
+@media (max-width: 360px) {
+    .container {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 70%; /* Even narrower input fields */
+        font-size: 11px;
+        padding: 6px;
+    }
+
+    button {
+        width: 70%; /* Button adjusts width */
+        font-size: 11px;
+        padding: 6px;
+    }
+}
